@@ -14,7 +14,6 @@ namespace dotnet_isolated_http_example {
             .ConfigureLogging((context, builder) => {
                 builder.AddApplicationInsights(
                     //Add the AI connection string to the local.settings.json and Azure app settings
-                    //
                     configureTelemetryConfiguration: (config) => config.ConnectionString = context.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"],
                     configureApplicationInsightsLoggerOptions: (options) => { }
                 );
